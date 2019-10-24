@@ -55,6 +55,11 @@ main > .tagline {
 	font-weight: 100;
 }
 
+main > .about {
+	font-size: 0.75rem;	
+	font-style: italic;
+}
+
 .icons-social i {
 	padding: 10px;
 }
