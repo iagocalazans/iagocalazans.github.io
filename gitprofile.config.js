@@ -4,14 +4,14 @@ const config = {
   github: {
     username: 'iagocalazans', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
-    limit: 10, // How many projects to display.
+    limit: 6, // How many projects to display.
     exclude: {
-      forks: false, // Forked projects will not be displayed if set to true.
+      forks: true, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'iagocalazans',
+    linkedin: 'iago-calazans',
     twitter: 'iago_calazans',
     mastodon: '',
     facebook: '',
@@ -19,13 +19,13 @@ const config = {
     youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
-    medium: 'iagocalazans',
+    medium: 'iago.calazans',
     dev: 'iagocalazans',
-    stackoverflow: '', // example: '1/jeff-atwood'
+    stackoverflow: '10481975/iago-calazans', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
     website: 'https://iagocalazans.dev',
-    phone: '',
+    phone: '+55 31 99565-7984',
     email: 'iago.calazans@gmail.com',
   },
   resume: {
@@ -44,20 +44,20 @@ const config = {
     'C',
   ],
   experiences: [
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
-    },
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
-    },
+    // {
+    //   company: 'Company Name',
+    //   position: 'Position',
+    //   from: 'September 2021',
+    //   to: 'Present',
+    //   companyLink: 'https://example.com',
+    // },
+    // {
+    //   company: 'Company Name',
+    //   position: 'Position',
+    //   from: 'July 2019',
+    //   to: 'August 2021',
+    //   companyLink: 'https://example.com',
+    // },
   ],
   /* certifications: [
     {
@@ -68,41 +68,35 @@ const config = {
     },
   ], */
   education: [
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
-    },
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
-    },
+    // {
+    //   institution: 'Institution Name',
+    //   degree: 'Degree',
+    //   from: '2015',
+    //   to: '2019',
+    // },
+    // {
+    //   institution: 'Institution Name',
+    //   degree: 'Degree',
+    //   from: '2012',
+    //   to: '2014',
+    // },
   ],
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'GeoEdge',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
-    },
-    {
-      title: 'Project Name',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'Plataforma pioneira de geomarketing somado a inteligência artificial para otimizar a performance de pontos de venda.',
+      imageUrl:
+        'https://kognita.com.br/wp-content/themes/kognita/images/logo-kognita-negativo.svg',
+      link: 'https://kognita.com.br/solucoes/geoedge/',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'medium', // medium | dev
-    username: 'iagocalazans', // to hide blog section, keep it empty
+    username: 'iago.calazans', // to hide blog section, keep it empty
     limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
@@ -114,7 +108,7 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'dracula',
+    defaultTheme: 'lemonade',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
