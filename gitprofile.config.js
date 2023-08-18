@@ -4,7 +4,7 @@ const config = {
   github: {
     username: 'iagocalazans', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
-    limit: 6, // How many projects to display.
+    limit: 4, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -44,20 +44,20 @@ const config = {
     'C',
   ],
   experiences: [
-    // {
-    //   company: 'Company Name',
-    //   position: 'Position',
-    //   from: 'September 2021',
-    //   to: 'Present',
-    //   companyLink: 'https://example.com',
-    // },
-    // {
-    //   company: 'Company Name',
-    //   position: 'Position',
-    //   from: 'July 2019',
-    //   to: 'August 2021',
-    //   companyLink: 'https://example.com',
-    // },
+    {
+      company: 'Stone Payments',
+      position: 'Senior Node.js Engineer',
+      from: 'Feb 2022',
+      to: 'Present',
+      companyLink: 'https://stone.com.br',
+    },
+    {
+      company: 'Kognita Lab.',
+      position: 'Tech Lead',
+      from: 'Sep 2020',
+      to: 'Feb 2022',
+      companyLink: 'https://kognita.ai',
+    },
   ],
   /* certifications: [
     {
@@ -168,11 +168,7 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  footer: `‴I eat and breathe JavaScript ♥ TypeScript, Node.js runtime and backend development.‷`,
 };
 
 export default config;
