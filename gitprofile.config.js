@@ -95,7 +95,7 @@ const config = {
     {
       title: 'twilio-functions-utils',
       description:
-        'This lib was created with the aim of simplifying the use of serverless Twilio, reducing the need to apply frequent try-catches and improving context management, making it no longer necessary to return the callback() method in all functions.',
+        'Created for simplifying the use of Twilio serverless (Twilio Functions).',
       imageUrl: 'https://avatars.githubusercontent.com/u/109142?s=200&v=4',
       link: 'https://www.npmjs.com/package/twilio-functions-utils',
     },
