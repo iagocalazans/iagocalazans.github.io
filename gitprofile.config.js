@@ -68,12 +68,12 @@ const config = {
     },
   ], */
   education: [
-    // {
-    //   institution: 'Institution Name',
-    //   degree: 'Degree',
-    //   from: '2015',
-    //   to: '2019',
-    // },
+    {
+      institution: 'Ampli',
+      degree: 'Software Engineering',
+      from: '2023',
+      to: '2026',
+    },
     // {
     //   institution: 'Institution Name',
     //   degree: 'Degree',
@@ -84,14 +84,14 @@ const config = {
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
-    {
-      title: 'GeoEdge',
-      description:
-        'Plataforma pioneira de geomarketing somado a inteligência artificial para otimizar a performance de pontos de venda.',
-      imageUrl:
-        'https://kognita.com.br/wp-content/themes/kognita/images/logo-kognita-negativo.svg',
-      link: 'https://kognita.com.br/solucoes/geoedge/',
-    },
+    // {
+    //   title: 'GeoEdge',
+    //   description:
+    //     'Plataforma pioneira de geomarketing somado a inteligência artificial para otimizar a performance de pontos de venda.',
+    //   imageUrl:
+    //     'https://kognita.com.br/wp-content/themes/kognita/images/logo-kognita-negativo.svg',
+    //   link: 'https://kognita.com.br/solucoes/geoedge/',
+    // },
     {
       title: 'twilio-functions-utils',
       description:
