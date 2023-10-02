@@ -6,7 +6,7 @@ const config = {
     sortBy: 'stars', // stars | updated
     limit: 4, // How many projects to display.
     exclude: {
-      forks: true, // Forked projects will not be displayed if set to true.
+      forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
@@ -41,7 +41,9 @@ const config = {
     'Git',
     'Docker',
     'C++',
-    'C',
+    'Zig',
+    'ElysiaJS',
+    'Bun.sh',
   ],
   experiences: [
     {
@@ -98,6 +100,13 @@ const config = {
         'Created for simplifying the use of Twilio serverless (Twilio Functions).',
       imageUrl: 'https://avatars.githubusercontent.com/u/109142?s=200&v=4',
       link: 'https://www.npmjs.com/package/twilio-functions-utils',
+    },
+    {
+      title: 'elysia-oauth2',
+      description:
+        'A plugin for Elysia.js for server-side OAuth 2.0 Authorization Code Flow with Cookies.',
+      imageUrl: 'https://avatars.githubusercontent.com/u/119793569?s=200&v=4',
+      link: 'https://npmjs.com/package/elysia-oauth2',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
