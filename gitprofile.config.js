@@ -102,11 +102,11 @@ const config = {
       link: 'https://www.npmjs.com/package/twilio-functions-utils',
     },
     {
-      title: 'elysia-oauth2',
+      title: '@iagocalazans/elysia-oauth2',
       description:
         'A plugin for Elysia.js for server-side OAuth 2.0 Authorization Code Flow with Cookies.',
       imageUrl: 'https://avatars.githubusercontent.com/u/119793569?s=200&v=4',
-      link: 'https://npmjs.com/package/elysia-oauth2',
+      link: 'https://npmjs.com/package/@iagocalazans/elysia-oauth2',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
