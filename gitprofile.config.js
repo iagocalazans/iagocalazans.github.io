@@ -60,6 +60,14 @@ const config = {
       to: 'Feb 2022',
       companyLink: 'https://kognita.ai',
     },
+    {
+      company: 'Artha Group',
+      position: 'Tech Lead',
+      from: 'Sep 2019',
+      to: 'Feb 2020',
+      // companyLink: 'https://kognita.ai',
+    },
+    
   ],
   /* certifications: [
     {
@@ -76,12 +84,12 @@ const config = {
       from: '2023',
       to: '2026',
     },
-    // {
-    //   institution: 'Institution Name',
-    //   degree: 'Degree',
-    //   from: '2012',
-    //   to: '2014',
-    // },
+    {
+      institution: 'Estácio',
+      degree: 'Matemathics',
+      from: '2021',
+      to: '2025',
+    },
   ],
 
   // To hide the `My Projects` section, keep it empty.
@@ -102,18 +110,18 @@ const config = {
       link: 'https://www.npmjs.com/package/twilio-functions-utils',
     },
     {
-      title: '@iagocalazans/elysia-oauth2',
+      title: 'declarative-based-flow',
       description:
-        'A plugin for Elysia.js for server-side OAuth 2.0 Authorization Code Flow with Cookies.',
+        'A powerful and intuitive npm package designed to simplify the construction of complex, structured workflows using a declarative and fluent syntax.',
       imageUrl: 'https://avatars.githubusercontent.com/u/119793569?s=200&v=4',
-      link: 'https://npmjs.com/package/@iagocalazans/elysia-oauth2',
+      link: 'https://www.npmjs.com/package/declarative-based-flow',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
     username: 'iagocalazans', // to hide blog section, keep it empty
-    limit: 2, // How many posts to display. Max is 10.
+    limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
