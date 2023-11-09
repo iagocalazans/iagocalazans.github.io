@@ -86,7 +86,7 @@ const config = {
     },
     {
       institution: 'Estácio',
-      degree: 'Matemathics',
+      degree: 'Mathematics',
       from: '2021',
       to: '2025',
     },
