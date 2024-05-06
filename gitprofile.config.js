@@ -50,7 +50,7 @@ const config = {
       company: 'Stone Payments',
       position: 'Senior Node.js Engineer',
       from: 'Feb 2022',
-      to: 'Present',
+      to: 'May 2024',
       companyLink: 'https://stone.com.br',
     },
     {
