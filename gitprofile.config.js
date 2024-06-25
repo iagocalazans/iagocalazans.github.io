@@ -12,18 +12,7 @@ const config = {
   },
   social: {
     linkedin: 'iago-calazans',
-    twitter: 'iago_calazans',
-    mastodon: '',
-    facebook: '',
-    instagram: 'iagocalazans_',
-    youtube: '', // example: 'pewdiepie'
-    dribbble: '',
-    behance: '',
-    medium: 'iago.calazans',
-    dev: 'iagocalazans',
     stackoverflow: '10481975/iago-calazans', // example: '1/jeff-atwood'
-    skype: '',
-    telegram: '',
     website: 'https://iagocalazans.dev',
     phone: '+55 31 99565-7984',
     email: 'iago.calazans@gmail.com',
@@ -35,17 +24,21 @@ const config = {
     'Node.js',
     'JavaScript',
     'React.js',
+    'Angular',
     'NestJS',
     'MySQL',
     'PostgreSQL',
     'Git',
     'Docker',
     'C++',
-    'Zig',
-    'ElysiaJS',
-    'Bun.sh',
   ],
   experiences: [
+    {
+      company: 'Edvisor',
+      position: 'Software Engineer',
+      from: 'May 2024',
+      companyLink: 'https://edvisor.io/',
+    },
     {
       company: 'Stone Payments',
       position: 'Senior Node.js Engineer',
