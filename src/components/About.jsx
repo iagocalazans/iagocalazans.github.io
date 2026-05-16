@@ -32,7 +32,7 @@ export default function About() {
         </div>
         <div>
           <div className="portrait portrait-photo">
-            <img src="/assets/iago.jpg" alt="Iago Calazans" />
+            <img src="/assets/profile.jpg" alt="Iago Calazans" />
             <div className="portrait-cap">belo horizonte · 2026</div>
           </div>
         </div>
