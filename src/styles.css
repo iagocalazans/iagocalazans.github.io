@@ -1163,6 +1163,132 @@ section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top:
 .reveal { opacity: 0; transform: translateY(10px); transition: opacity 700ms ease, transform 700ms ease; }
 .reveal.in { opacity: 1; transform: none; }
 
+/* ---------- View toggle (HUMAN / ATS) ---------- */
+.view-toggle {
+  position: fixed;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 16px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 60;
+  box-shadow: var(--shadow);
+}
+.vt-opt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+  transition: color 180ms ease;
+}
+.vt-opt:hover { color: var(--fg); }
+.vt-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 1px solid var(--muted);
+  background: transparent;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.vt-opt.active { color: var(--fg); }
+.vt-opt.active .vt-dot {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 22%, transparent);
+}
+.vt-label {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 1;
+}
+
+/* ---------- ATS view ---------- */
+.ats {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 48px 40px 120px;
+}
+.ats-head {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 28px;
+  margin-bottom: 32px;
+}
+.ats-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.ats-status {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 22%, transparent);
+}
+.ats-title {
+  font-family: var(--mono);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin-bottom: 14px;
+}
+.ats-sub {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  max-width: 64ch;
+  line-height: 1.7;
+}
+.ats-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+.ats-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--fg);
+  background: var(--card);
+  transition: border-color 150ms ease, color 150ms ease, background-color 150ms ease;
+}
+.ats-btn:hover { border-color: var(--accent); color: var(--accent); }
+.ats-doc {
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--fg);
+  background: var(--card);
+  border: 1px solid var(--card-line);
+  border-radius: var(--radius-sm);
+  padding: 28px 32px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+}
+.ats-doc code {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .page { padding: 24px 24px 80px; }
@@ -1179,4 +1305,27 @@ section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top:
   .contact { grid-template-columns: 1fr; }
   .nav a { display: none; }
   .theme-toggle { margin-left: 0; }
+  .view-toggle {
+    top: auto;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    padding: 8px 16px;
+  }
+  .vt-opt {
+    flex-direction: row;
+    gap: 8px;
+    padding: 4px 6px;
+  }
+  .vt-label {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+  }
+  .ats { padding: 32px 20px 80px; }
+  .ats-doc { padding: 20px 18px; font-size: 12px; }
 }

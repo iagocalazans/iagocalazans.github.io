@@ -8,6 +8,8 @@ import Stack from './components/Stack.jsx';
 import Experience from './components/Experience.jsx';
 import Writing from './components/Writing.jsx';
 import Contact from './components/Contact.jsx';
+import ViewToggle from './components/ViewToggle.jsx';
+import AtsView from './components/AtsView.jsx';
 
 const SCROLL_SPY_IDS = ['work', 'about', 'writing', 'contact'];
 
@@ -16,18 +18,24 @@ const devtoUsername = import.meta.env.VITE_DEVTO_USERNAME || 'iagocalazans';
 const githubToken = import.meta.env.VITE_GITHUB_TOKEN || '';
 
 /**
- * Page shell: owns theme state, the scroll-spy / reveal observers,
- * and assembles the editorial layout.
+ * Page shell: owns theme + view-mode state, the scroll-spy / reveal observers,
+ * and assembles the editorial layout (or the ATS markdown render).
  */
 export default function App() {
   const [theme, setTheme] = useState('light');
   const [active, setActive] = useState('work');
+  const [view, setView] = useState('human');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
   useEffect(() => {
+    document.documentElement.setAttribute('data-view', view);
+  }, [view]);
+
+  useEffect(() => {
+    if (view !== 'human') return undefined;
     const els = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(
       (entries) => {
@@ -39,9 +47,10 @@ export default function App() {
     );
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [view]);
 
   useEffect(() => {
+    if (view !== 'human') return undefined;
     const nodes = SCROLL_SPY_IDS.map((id) => document.getElementById(id)).filter(Boolean);
     const observer = new IntersectionObserver(
       (entries) => {
@@ -54,19 +63,30 @@ export default function App() {
     );
     nodes.forEach((node) => observer.observe(node));
     return () => observer.disconnect();
-  }, []);
+  }, [view]);
 
   return (
-    <div className="page">
-      <TopBar theme={theme} setTheme={setTheme} active={active} />
-      <Hero />
-      <Feature />
-      <Archive username={githubUsername} token={githubToken} />
-      <About />
-      <Stack />
-      <Experience />
-      <Writing username={devtoUsername} />
-      <Contact />
-    </div>
+    <>
+      <ViewToggle view={view} setView={setView} />
+      {view === 'human' ? (
+        <div className="page">
+          <TopBar theme={theme} setTheme={setTheme} active={active} />
+          <Hero />
+          <Feature />
+          <Archive username={githubUsername} token={githubToken} />
+          <About />
+          <Stack />
+          <Experience />
+          <Writing username={devtoUsername} />
+          <Contact />
+        </div>
+      ) : (
+        <AtsView
+          githubUsername={githubUsername}
+          githubToken={githubToken}
+          devtoUsername={devtoUsername}
+        />
+      )}
+    </>
   );
 }
