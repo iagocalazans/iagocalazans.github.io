@@ -948,6 +948,139 @@ section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top:
   border-radius: 2px;
 }
 
+/* ---------- Overflow.guru mobile mock (theme-aware) ---------- */
+.og-mock-mobile {
+  --mock-side-bg: #efebe1;
+  --mock-card: #ffffff;
+  --mock-card-line: #e7e3d8;
+  --mock-text: #15161a;
+  --mock-text-muted: #6b6a64;
+  --mock-text-dim: #8a877f;
+  --mock-divider: #d9d5cc;
+  --mock-pos: #5e8d51;
+  --mock-pos-bg: rgba(94, 141, 81, 0.12);
+  --mock-pos-line: rgba(94, 141, 81, 0.35);
+  --mock-neg: #b85a40;
+  --mock-page-bg: #f6f4ef;
+
+  display: none;
+  font-family: var(--sans);
+  color: var(--mock-text);
+  background: var(--mock-page-bg);
+  border-radius: 8px;
+  padding: 14px 14px 12px;
+  flex-direction: column;
+  gap: 12px;
+}
+[data-theme="dark"] .og-mock-mobile {
+  --mock-side-bg: #16181c;
+  --mock-card: #25272d;
+  --mock-card-line: #2a2c33;
+  --mock-text: #ece9e1;
+  --mock-text-muted: #6b6a64;
+  --mock-text-dim: #a5a297;
+  --mock-divider: #2a2c33;
+  --mock-pos: #6cb273;
+  --mock-pos-bg: rgba(108, 178, 115, 0.1);
+  --mock-pos-line: rgba(108, 178, 115, 0.3);
+  --mock-neg: #e07466;
+  --mock-page-bg: #16181c;
+}
+.og-mockm-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.og-mockm-side-btn {
+  width: 22px; height: 22px;
+  border-radius: 5px;
+  border: 1px solid var(--mock-card-line);
+  background: var(--mock-card);
+  color: var(--mock-text);
+  display: grid; place-items: center;
+}
+.og-mockm-new {
+  font-family: var(--mono);
+  font-size: 9px;
+  background: var(--mock-text);
+  color: var(--mock-page-bg);
+  padding: 5px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.og-mockm-head h4 {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--mock-text);
+  margin-bottom: 4px;
+}
+.og-mockm-sub {
+  display: block;
+  font-family: var(--mono);
+  font-size: 8px;
+  color: var(--mock-text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+.og-mockm-desc {
+  font-size: 9px;
+  line-height: 1.45;
+  color: var(--mock-text-dim);
+}
+.og-mockm-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+.og-mockm-card {
+  background: var(--mock-card);
+  border: 1px solid var(--mock-card-line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.og-mockm-card.highlight { border-color: var(--mock-pos-line); }
+.og-mockm-card .lbl {
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  color: var(--mock-text-muted);
+}
+.og-mockm-card strong {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--mock-text);
+  line-height: 1.05;
+}
+.og-mockm-card strong.pos { color: var(--mock-pos); }
+.og-mockm-card strong.neg { color: var(--mock-neg); }
+.og-mockm-card small {
+  font-family: var(--mono);
+  font-size: 7px;
+  color: var(--mock-text-dim);
+  letter-spacing: 0.03em;
+}
+.og-mockm-card small.pos { color: var(--mock-pos); }
+.og-mockm-banner {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--mock-pos-bg);
+  border: 1px solid var(--mock-pos-line);
+  border-radius: 5px;
+  padding: 6px 8px;
+  font-size: 8px;
+  color: var(--mock-text);
+}
+.og-mockm-banner .check {
+  width: 12px; height: 12px;
+  background: var(--mock-pos);
+  color: var(--mock-page-bg);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  flex: 0 0 12px;
+}
+
 /* ---------- Loading / empty states ---------- */
 .skeleton-row {
   height: 72px;
@@ -993,11 +1126,15 @@ section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top:
   .page { padding: 24px 24px 80px; }
   .hero { grid-template-columns: 1fr; gap: 32px; }
   .feature { grid-template-columns: 1fr; }
-  .feature-visual { min-height: 340px; }
+  .feature-visual { min-height: 340px; padding: 28px; }
+  .feature-screen { padding: 14px 14px 12px; }
+  .og-mock { display: none; }
+  .og-mock-mobile { display: flex; }
   .grid-2 { grid-template-columns: 1fr; gap: 36px; }
   .archive-row { grid-template-columns: 40px 1fr 60px; }
   .archive-desc, .archive-stats { display: none; }
   .posts { grid-template-columns: 1fr; }
   .contact { grid-template-columns: 1fr; }
-  .nav { display: none; }
+  .nav a { display: none; }
+  .theme-toggle { margin-left: 0; }
 }

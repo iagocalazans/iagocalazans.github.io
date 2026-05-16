@@ -24,6 +24,52 @@ export default function Feature() {
               <span />
               <span />
             </div>
+            <div className="og-mock-mobile">
+              <div className="og-mockm-topbar">
+                <span className="og-mockm-side-btn">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <path d="M9 4v16" />
+                  </svg>
+                </span>
+                <span className="og-mockm-new">+ Novo lançamento</span>
+              </div>
+              <div className="og-mockm-head">
+                <h4>Análise · Maio</h4>
+                <span className="og-mockm-sub">Atualizado agora · 15 dias restantes no mês</span>
+                <p className="og-mockm-desc">Como o seu mês está fluindo. Sem culpa, só padrões — toque em qualquer cartão para ver detalhes.</p>
+              </div>
+              <div className="og-mockm-cards">
+                <div className="og-mockm-card">
+                  <span className="lbl">RECEITA ATÉ AGORA</span>
+                  <strong>R$ 559,23</strong>
+                  <small>Recebido este mês</small>
+                </div>
+                <div className="og-mockm-card">
+                  <span className="lbl">GASTO ATÉ AGORA</span>
+                  <strong>R$ 233,34</strong>
+                  <small>Lançamentos realizados</small>
+                </div>
+                <div className="og-mockm-card">
+                  <span className="lbl">TAXA DE POUPANÇA</span>
+                  <strong className="pos">58%</strong>
+                  <small className="pos">R$ 325,89 guardados</small>
+                </div>
+                <div className="og-mockm-card highlight">
+                  <span className="lbl">CATEGORIAS ESTOURADAS</span>
+                  <strong className="neg">4</strong>
+                  <small>Veja “Precisa da sua atenção” no Plano</small>
+                </div>
+              </div>
+              <div className="og-mockm-banner">
+                <span className="check">
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg>
+                </span>
+                <span>Bom progresso este mês.</span>
+              </div>
+            </div>
             <div className="og-mock">
               <aside className="og-mock-side">
                 <div className="og-mock-side-header">

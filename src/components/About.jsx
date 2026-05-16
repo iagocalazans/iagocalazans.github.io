@@ -15,10 +15,10 @@ export default function About() {
       <div className="grid-2">
         <div className="about-copy">
           <p>
-            I’ve spent the last decade writing backends: payments at <strong>Stone</strong>, conversational tooling at{' '}
-            <strong>Take Blip</strong>, and most recently the international-education platform at{' '}
-            <strong>Edvisor</strong>. My day-to-day is <strong>Node, TypeScript, and NestJS</strong>, but I read a lot
-            of C++ and I have opinions about it.
+            I’ve spent the last decade writing backends: a chatbot framework at <strong>Kognita Lab</strong>, payments
+            at <strong>Stone</strong> — with a Twilio Functions library shipped to npm in that stretch — and most
+            recently the international-education platform at <strong>Edvisor</strong>. My day-to-day is{' '}
+            <strong>Node, TypeScript, and NestJS</strong>, but I read a lot of C++ and I have opinions about it.
           </p>
           <p>
             The libraries I publish are all attempts to remove ceremony from things I do every week: typed try/catch,
