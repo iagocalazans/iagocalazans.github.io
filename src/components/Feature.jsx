@@ -37,7 +37,7 @@ export default function Feature() {
               <div className="og-mockm-head">
                 <h4>Análise · Maio</h4>
                 <span className="og-mockm-sub">Atualizado agora · 15 dias restantes no mês</span>
-                <p className="og-mockm-desc">Como o seu mês está fluindo. Sem culpa, só padrões — toque em qualquer cartão para ver detalhes.</p>
+                <p className="og-mockm-desc">Como o seu mês está fluindo. Sem culpa, só padrões. Toque em qualquer cartão para ver detalhes.</p>
               </div>
               <div className="og-mockm-cards">
                 <div className="og-mockm-card">

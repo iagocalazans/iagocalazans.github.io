@@ -1,6 +1,6 @@
 # iagocalazans.dev
 
-Personal page for Iago Calazans — Vite + React rewrite of the editorial design exported from Claude Design.
+Personal page for Iago Calazans: Vite + React rewrite of the editorial design exported from Claude Design.
 
 The page is a faithful port of `Personal Page.html` from the design bundle, with two sections wired
 to live data instead of static lists:
@@ -10,7 +10,7 @@ to live data instead of static lists:
 | `02 / open source` | Public GitHub repos sorted by star count  | `GET https://api.github.com/search/repositories?q=user:<name>+fork:false&sort=stars` |
 | `06 / writing`     | Published dev.to articles                 | `GET https://dev.to/api/articles?username=<name>`                |
 
-Everything else — hero, Overflow.guru feature, about, stack, experience, contact — stays as
+Everything else (hero, Overflow.guru feature, about, stack, experience, contact) stays as
 authored content in `src/data/profile.js` and the static components.
 
 ## Stack
@@ -28,7 +28,7 @@ cp .env.example .env
 npm run dev
 ```
 
-`VITE_GITHUB_TOKEN` is **optional** — without it, the GitHub API is hit anonymously and may rate-limit
+`VITE_GITHUB_TOKEN` is **optional**. Without it, the GitHub API is hit anonymously and may rate-limit
 during local development. A read-only fine-grained token with the `public_repo` scope is enough.
 
 ## Environment variables
