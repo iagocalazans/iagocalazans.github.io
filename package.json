@@ -1,0 +1,20 @@
+{
+  "name": "iagocalazans-dev",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Iago Calazans — personal page (Vite + React) with dev.to posts and GitHub repos auto-listing.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.10"
+  }
+}
