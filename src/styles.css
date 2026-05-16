@@ -962,19 +962,26 @@ section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top:
 }
 .og-mock-bar-row {
   display: grid;
-  grid-template-columns: 38px 1fr;
+  grid-template-columns: 48px 1fr;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   margin-bottom: 3px;
   font-family: var(--mono);
   font-size: 7px;
   color: var(--mock-text-dim);
+}
+.og-mock-bar-row span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 .og-mock-bar-row i {
   display: block;
   height: 4px;
   background: var(--mock-pos);
   border-radius: 2px;
+  min-width: 0;
 }
 
 /* ---------- Overflow.guru mobile mock (theme-aware) ---------- */
