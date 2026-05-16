@@ -26,7 +26,14 @@ export default function About() {
             rewrite it.
           </p>
           <p>
-            On the side I design and ship small consumer tools. <strong>Overflow.guru</strong> is the current one: a
+            On the side I design and ship small consumer tools. <a
+            href="https://overflow.guru"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--fg)', fontWeight: 500, borderBottom: '1px solid var(--accent)' }}
+          >
+            Overflow.Guru
+          </a> is the current one: a
             budget app for people who have never managed to use a budget app.
           </p>
         </div>

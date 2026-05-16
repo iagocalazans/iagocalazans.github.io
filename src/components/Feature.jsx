@@ -42,23 +42,23 @@ export default function Feature() {
               <div className="og-mockm-cards">
                 <div className="og-mockm-card">
                   <span className="lbl">RECEITA ATÉ AGORA</span>
-                  <strong>R$ 559,23</strong>
+                  <strong className="hidden-val">●●●●●</strong>
                   <small>Recebido este mês</small>
                 </div>
                 <div className="og-mockm-card">
                   <span className="lbl">GASTO ATÉ AGORA</span>
-                  <strong>R$ 233,34</strong>
+                  <strong className="hidden-val">●●●●●</strong>
                   <small>Lançamentos realizados</small>
                 </div>
                 <div className="og-mockm-card">
                   <span className="lbl">TAXA DE POUPANÇA</span>
-                  <strong className="pos">58%</strong>
-                  <small className="pos">R$ 325,89 guardados</small>
+                  <strong className="hidden-val">●●●●●</strong>
+                  <small>guardados este mês</small>
                 </div>
                 <div className="og-mockm-card highlight">
                   <span className="lbl">CATEGORIAS ESTOURADAS</span>
-                  <strong className="neg">4</strong>
-                  <small>Veja “Precisa da sua atenção” no Plano</small>
+                  <strong className="hidden-val">●●●●●</strong>
+                  <small>Tudo sob controle</small>
                 </div>
               </div>
               <div className="og-mockm-banner">
@@ -86,19 +86,23 @@ export default function Feature() {
                 <div className="og-mock-side-section">CONTAS</div>
                 <div className="og-mock-side-row">
                   <span>Nubank</span>
-                  <span>R$ 101</span>
+                  <span className="val">●●●</span>
                 </div>
                 <div className="og-mock-side-row">
-                  <span>Roxinho</span>
-                  <span className="neg">-R$ 8.165</span>
+                  <span>Nu Roxinho</span>
+                  <span className="val">●●●</span>
+                </div>
+                <div className="og-mock-side-row">
+                  <span>Saldo sep.</span>
+                  <span className="val">●●●</span>
                 </div>
                 <div className="og-mock-side-row">
                   <span>Itaú</span>
-                  <span>R$ 0</span>
+                  <span className="val">●●●</span>
                 </div>
                 <div className="og-mock-side-row total">
                   <span>Total</span>
-                  <span className="neg">-R$ 8.013</span>
+                  <span className="val">●●●</span>
                 </div>
                 <div className="og-mock-side-foot">
                   <div className="og-mock-avatar">IC</div>
@@ -113,27 +117,25 @@ export default function Feature() {
                   </div>
                   <div className="og-mock-destiny">
                     <span>CADA REAL COM SEU DESTINO</span>
-                    <strong>
-                      R$ 0,<small>00</small>
-                    </strong>
+                    <strong className="hidden-val">●●●</strong>
                   </div>
                 </div>
                 <div className="og-mock-kpis">
                   <div className="og-mock-kpi">
                     <span>RECEITA</span>
-                    <strong>R$ 559</strong>
+                    <strong className="hidden-val">●●●</strong>
                   </div>
                   <div className="og-mock-kpi">
                     <span>GASTO</span>
-                    <strong>R$ 170</strong>
+                    <strong className="hidden-val">●●●</strong>
                   </div>
                   <div className="og-mock-kpi">
                     <span>POUPANÇA</span>
-                    <strong className="pos">70%</strong>
+                    <strong className="hidden-val">●●●</strong>
                   </div>
                   <div className="og-mock-kpi">
                     <span>ESTOURADAS</span>
-                    <strong className="pos">0</strong>
+                    <strong className="hidden-val">●●●</strong>
                   </div>
                 </div>
                 <div className="og-mock-banner">
@@ -149,7 +151,7 @@ export default function Feature() {
                     <span className="lbl">CARTÕES DE CRÉDITO</span>
                     <div className="og-mock-card-row">
                       <span>Nubank Roxinho</span>
-                      <span>R$ 11.662</span>
+                      <span className="val">●●●</span>
                     </div>
                     <div className="og-mock-progress">
                       <i style={{ width: '100%' }} />
