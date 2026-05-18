@@ -37,7 +37,7 @@ export const EXPERIENCE = [
     to: "Feb 2022",
     role: "Tech Lead",
     co: "Kognita Lab · remote",
-    note: "Designed and built shallot-framework, an in-house Node.js chatbot framework integrating Microsoft LUIS for NLU and a partner omnichannel communication platform — adopted across 10+ enterprise clients and cutting per-deployment setup time by 60%. Led a 6-engineer team shipping production services in NestJS, Node.js and PHP.",
+    note: "Designed and built shallot-framework, an in-house Node.js chatbot framework integrating Microsoft LUIS for NLU and a partner omnichannel communication platform, adopted across 10+ enterprise clients and cutting per-deployment setup time by 60%. Led a 6-engineer team shipping production services in NestJS, Node.js and PHP.",
   },
   {
     from: "Dec 2019",

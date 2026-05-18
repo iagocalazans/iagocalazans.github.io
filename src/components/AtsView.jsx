@@ -6,7 +6,7 @@ import { useDevPosts } from '../hooks/useDevPosts.js';
 const PROFICIENCY_LABEL = { 3: 'expert', 2: 'proficient', 1: 'familiar' };
 
 /**
- * Renders the same portfolio content as a flat, plaintext/markdown document —
+ * Renders the same portfolio content as a flat, plaintext/markdown document,
  * the kind of structured payload an ATS (Applicant Tracking System) or LLM agent
  * can parse without hitting the visual layout.
  *
@@ -117,7 +117,7 @@ function summarySection() {
     '## Summary',
     '',
     'Backend engineer with a decade of production experience building B2B SaaS, telephony and conversational platforms.',
-    'Day-to-day: Node, TypeScript, NestJS — with strong opinions about hexagonal architecture, event-driven',
+    'Day-to-day: Node, TypeScript, NestJS, with strong opinions about hexagonal architecture, event-driven',
     'systems and DDD.',
     '',
     'Recently focused on LLM tooling: MCP servers, Claude API integrations and developer-facing internal apps.',
@@ -136,7 +136,7 @@ function experienceSection() {
   const lines = ['## Experience'];
   EXPERIENCE.forEach((entry) => {
     lines.push('');
-    lines.push(`### ${entry.role} — ${entry.co}`);
+    lines.push(`### ${entry.role} · ${entry.co}`);
     lines.push(`${entry.from} – ${entry.to}`);
     lines.push('');
     lines.push(entry.note);
