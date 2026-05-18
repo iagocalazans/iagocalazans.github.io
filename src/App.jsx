@@ -22,13 +22,24 @@ const githubToken = import.meta.env.VITE_GITHUB_TOKEN || '';
  * and assembles the editorial layout (or the ATS markdown render).
  */
 export default function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() =>
+    typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light',
+  );
   const [active, setActive] = useState('work');
   const [view, setView] = useState('human');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (event) => setTheme(event.matches ? 'dark' : 'light');
+    media.addEventListener('change', handleChange);
+    return () => media.removeEventListener('change', handleChange);
+  }, []);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-view', view);

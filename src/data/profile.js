@@ -8,12 +8,12 @@ export const STACK = [
   ["Node.js", 3],
   ["NestJS", 3],
   ["JavaScript", 3],
+  ["Git", 3],
+  ["PostgreSQL", 3],
   ["React.js", 2],
-  ["Angular", 2],
-  ["PostgreSQL", 2],
   ["MySQL", 2],
   ["Docker", 2],
-  ["Git", 3],
+  ["Angular", 1],
   ["C++", 1],
 ];
 
