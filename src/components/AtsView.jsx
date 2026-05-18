@@ -116,9 +116,9 @@ function summarySection() {
   return [
     '## Summary',
     '',
-    'Backend engineer with a decade of production experience across payments, edtech and chatbot platforms.',
+    'Backend engineer with a decade of production experience building B2B SaaS, telephony and conversational platforms.',
     'Day-to-day: Node, TypeScript, NestJS — with strong opinions about hexagonal architecture, event-driven',
-    'systems and DDD. Comfortable reading C++ and shipping native modules when latency demands it.',
+    'systems and DDD.',
     '',
     'Recently focused on LLM tooling: MCP servers, Claude API integrations and developer-facing internal apps.',
   ].join('\n');
