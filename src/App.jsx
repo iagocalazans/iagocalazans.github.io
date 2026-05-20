@@ -63,17 +63,32 @@ export default function App() {
   useEffect(() => {
     if (view !== 'human') return undefined;
     const nodes = SCROLL_SPY_IDS.map((id) => document.getElementById(id)).filter(Boolean);
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]) setActive(visible[0].target.id);
-      },
-      { threshold: [0.25, 0.5, 0.75] },
-    );
-    nodes.forEach((node) => observer.observe(node));
-    return () => observer.disconnect();
+    if (!nodes.length) return undefined;
+
+    const HEADER_OFFSET = 100;
+
+    const syncActive = () => {
+      const reachedBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (reachedBottom) {
+        setActive(nodes[nodes.length - 1].id);
+        return;
+      }
+      let current = nodes[0].id;
+      for (const node of nodes) {
+        if (node.getBoundingClientRect().top > HEADER_OFFSET) break;
+        current = node.id;
+      }
+      setActive(current);
+    };
+
+    syncActive();
+    window.addEventListener('scroll', syncActive, { passive: true });
+    window.addEventListener('resize', syncActive, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', syncActive);
+      window.removeEventListener('resize', syncActive);
+    };
   }, [view]);
 
   return (
