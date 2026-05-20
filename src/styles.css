@@ -536,20 +536,22 @@ section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top:
 }
 .stack-pill:hover {
   transform: translateY(-2px);
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--dot, var(--accent));
 }
 .stack-pill .level {
   display: inline-block;
-  width: 5px; height: 5px;
+  width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--dot, var(--accent));
   margin-right: 6px;
   vertical-align: middle;
-  opacity: 0.4;
 }
-.stack-pill.lvl-3 .level { opacity: 1; }
-.stack-pill.lvl-2 .level { opacity: 0.7; }
+.stack-pill.lvl-2 .level,
+.stack-pill.lvl-1 .level {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--dot, var(--accent));
+}
+.stack-pill.lvl-1 .level { opacity: 0.55; }
 
 /* ---------- Experience timeline ---------- */
 .timeline { position: relative; }

@@ -1,7 +1,8 @@
-import { STACK } from '../data/profile.js';
+import { STACK, STACK_COLORS } from '../data/profile.js';
 
 /**
- * Skills/stack section. Pill opacity encodes self-rated proficiency level (1-3).
+ * Skills/stack section. Each pill's dot is tinted with the item's brand color;
+ * the dot fill style encodes self-rated proficiency (solid = lead-ready, ring otherwise).
  */
 export default function Stack() {
   return (
@@ -15,7 +16,11 @@ export default function Stack() {
       </div>
       <div className="stack">
         {STACK.map(([name, lvl]) => (
-          <span key={name} className={`stack-pill lvl-${lvl}`}>
+          <span
+            key={name}
+            className={`stack-pill lvl-${lvl}`}
+            style={{ '--dot': STACK_COLORS[name] || 'var(--accent)' }}
+          >
             <span className="level" />
             {name}
           </span>

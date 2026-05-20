@@ -106,3 +106,22 @@ export const LANG_COLORS = {
   Vue: "#41b883",
   Svelte: "#ff3e00",
 };
+
+/**
+ * Brand color per stack item, used to tint each pill's dot.
+ * Languages also present in {@link LANG_COLORS} reuse those exact values so the
+ * stack stays consistent with the archive; tools and frameworks use their own brand hues.
+ */
+export const STACK_COLORS = {
+  TypeScript: LANG_COLORS.TypeScript,
+  "Node.js": "#5fa04e",
+  NestJS: "#e0234e",
+  JavaScript: LANG_COLORS.JavaScript,
+  Git: "#f05032",
+  PostgreSQL: "#336791",
+  "React.js": "#61dafb",
+  MySQL: "#4479a1",
+  Docker: "#2496ed",
+  Angular: "#dd0031",
+  "C++": LANG_COLORS["C++"],
+};
