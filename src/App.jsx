@@ -17,6 +17,29 @@ const githubUsername = import.meta.env.VITE_GITHUB_USERNAME || 'iagocalazans';
 const devtoUsername = import.meta.env.VITE_DEVTO_USERNAME || 'iagocalazans';
 const githubToken = import.meta.env.VITE_GITHUB_TOKEN || '';
 
+const BOT_UA_PATTERN =
+  /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|quora|outbrain|pinterest|slackbot|telegrambot|whatsapp|linkedinbot|gptbot|oai-searchbot|chatgpt|claudebot|claude-web|anthropic|perplexity|ccbot|google-extended|cohere|bytespider|amazonbot|applebot|petalbot/i;
+
+/**
+ * Resolves the view mode for the first render.
+ *
+ * An explicit `?view=` query (or `#ats` hash) always wins, so the ATS document
+ * is shareable via a deep link. Otherwise a known crawler / LLM user-agent is
+ * routed straight to the machine-readable view; everyone else gets the editorial
+ * layout. This complements the build-time pre-render: JS-capable agents land on
+ * the ATS view, JS-less ones still read the baked `<noscript>` / JSON-LD payload.
+ *
+ * @returns {'human' | 'ats'} The view to mount first.
+ */
+function resolveInitialView() {
+  if (typeof window === 'undefined') return 'human';
+  const requested = new URLSearchParams(window.location.search).get('view');
+  if (requested === 'ats' || requested === 'human') return requested;
+  if (window.location.hash === '#ats') return 'ats';
+  if (BOT_UA_PATTERN.test(window.navigator.userAgent)) return 'ats';
+  return 'human';
+}
+
 /**
  * Page shell: owns theme + view-mode state, the scroll-spy / reveal observers,
  * and assembles the editorial layout (or the ATS markdown render).
@@ -28,11 +51,21 @@ export default function App() {
       : 'light',
   );
   const [active, setActive] = useState('work');
-  const [view, setView] = useState('human');
+  const [view, setView] = useState(resolveInitialView);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (view === 'ats') {
+      url.searchParams.set('view', 'ats');
+    } else {
+      url.searchParams.delete('view');
+    }
+    window.history.replaceState(null, '', url);
+  }, [view]);
 
   useEffect(() => {
     const media = window.matchMedia('(prefers-color-scheme: dark)');
