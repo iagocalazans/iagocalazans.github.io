@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Icon from './Icon.jsx';
 
 const NAV_ITEMS = [
@@ -7,8 +8,13 @@ const NAV_ITEMS = [
   { id: 'contact', label: 'contact' },
 ];
 
+const SCROLL_THRESHOLD = 12;
+
 /**
- * Sticky-feeling top bar with availability marker, in-page navigation, and theme toggle.
+ * Sticky top bar with availability marker, in-page navigation, and theme toggle.
+ *
+ * Pins to the top of the viewport while navigating and slims into a thinner,
+ * divider-backed bar once the page scrolls past {@link SCROLL_THRESHOLD}.
  *
  * @param props
  * @param props.theme - Active theme, "light" or "dark".
@@ -16,8 +22,17 @@ const NAV_ITEMS = [
  * @param props.active - Section id currently in view (drives the active nav pill).
  */
 export default function TopBar({ theme, setTheme, active }) {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="topbar">
+    <header className={scrolled ? 'topbar scrolled' : 'topbar'}>
       <div className="mark">
         <span className="dot" />
         <span>
