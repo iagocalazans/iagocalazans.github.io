@@ -25,13 +25,13 @@ html { scroll-behavior: smooth; }
 }
 
 [data-theme="dark"] {
-  --cream: #1d2330;
+  --cream: #18191b;
   --cream-2: #1f2022;
   --ink: #ece9e1;
   --ink-2: #cfccc4;
   --muted: #908e88;
   --line: #2b2c2f;
-  --bg: #1d2330;
+  --bg: #18191b;
   --fg: #ece9e1;
   --card: #1f2022;
   --card-line: #2d2e31;
