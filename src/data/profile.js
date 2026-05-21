@@ -23,14 +23,14 @@ export const EXPERIENCE = [
     to: "Mar 2026",
     role: "Senior Software Engineer",
     co: "Edvisor.io · remote from BR",
-    note: "Recruiting platform for international education - connecting agencies and partner schools. Redesigned the notification system into an event-driven architecture (AWS SQS · Lambda · NestJS), shipped a reusable Transfermate payments integration library, and built LLM-powered internal tooling via MCP servers and the Claude API.",
+    note: "Recruiting platform for international education - connecting agencies and partner schools. Owned the Wallet service that manages payments under the main platform via the Transfermate API, shipping a reusable integration library around it. Redesigned the notification system into an event-driven architecture (AWS SQS · Lambda · NestJS), and built LLM-powered internal tooling via MCP servers and the Claude API.",
   },
   {
     from: "Feb 2022",
     to: "May 2024",
     role: "Senior Node.js Engineer",
     co: "Stone · remote",
-    note: "Built and scaled the internal telephony stack in TypeScript/NestJS on top of Twilio Voice and Twilio Flex, automating contact-center queue routing with RabbitMQ and Twilio Functions. Authored twilio-functions-utils, an open-source helper library that became the team’s default scaffold for Twilio Functions. Mentored 5+ engineers and lifted core test coverage from 40% to 85%+.",
+    note: "Built and scaled the internal contact-center platform in TypeScript/NestJS on top of Twilio Voice and Twilio Flex, automating customer-support queue routing with RabbitMQ and Twilio Functions. Authored twilio-functions-utils, an open-source helper library that became the team’s default scaffold for Twilio Functions. Mentored 5+ engineers and lifted core test coverage from 40% to 85%+.",
   },
   {
     from: "Sep 2020",

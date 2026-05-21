@@ -27,7 +27,7 @@ export default function Hero() {
       </div>
       <dl className="hero-meta">
         <dt>Based</dt>
-        <dd>Belo Horizonte, BR</dd>
+        <dd>Belo Horizonte, MG, BR</dd>
         <dt>Role</dt>
         <dd>Senior Software Engineer</dd>
         <dt>Focus</dt>

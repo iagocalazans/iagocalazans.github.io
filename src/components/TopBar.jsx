@@ -36,7 +36,7 @@ export default function TopBar({ theme, setTheme, active }) {
       <div className="mark">
         <span className="dot" />
         <span>
-          <strong>iago calazans</strong> · available for select work, Q3 ’26
+          <strong>iago calazans</strong> · available for select work, Q2 ’26
         </span>
       </div>
       <nav className="nav">
