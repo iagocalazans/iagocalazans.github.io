@@ -116,18 +116,18 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   color: var(--muted);
   transition: color 150ms ease, background-color 150ms ease;
 }
-.nav a:hover { color: var(--fg); background: var(--cream-2); }
+.nav a:hover { color: var(--fg); background: color-mix(in oklab, var(--fg) 12%, var(--bg)); }
 .nav a.active { color: var(--fg); background: color-mix(in oklab, var(--fg) 12%, var(--bg)); }
 
 .theme-toggle {
   width: 36px; height: 36px;
   border-radius: 999px;
-  background: var(--cream-2);
+  background: color-mix(in oklab, var(--fg) 12%, var(--bg));
   display: grid; place-items: center;
   margin-left: 8px;
   transition: background-color 200ms ease, transform 200ms ease;
 }
-.theme-toggle:hover { background: var(--chip); transform: scale(1.05); }
+.theme-toggle:hover { background: color-mix(in oklab, var(--fg) 12%, var(--bg)); transform: scale(1.05); }
 .theme-toggle svg { width: 16px; height: 16px; }
 
 /* ---------- Hero ---------- */
