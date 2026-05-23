@@ -19,6 +19,14 @@ export const STACK = [
 
 export const EXPERIENCE = [
   {
+    from: "May 2026",
+    to: "Present",
+    current: true,
+    role: "Software/Product Engineer",
+    co: "HG Insights · remote from BR",
+    note: "AI-powered revenue growth intelligence platform unifying market, account, IT-spend, intent and competitor data into GTM strategy and activation workflows. Recently joined. More detail as the work takes shape.",
+  },
+  {
     from: "May 2024",
     to: "Mar 2026",
     role: "Senior Software Engineer",
@@ -54,6 +62,13 @@ export const EXPERIENCE = [
     note: "Progressive engineering roles across e-commerce, web and BI: Magento, PHP and full-stack JavaScript. Where the database design and API architecture muscle was built.",
   },
 ];
+
+/**
+ * Whether any experience entry is still ongoing, detected by an end date of
+ * "Present". Drives the header status indicator: an ongoing role flips the
+ * marker from "available" (green) to "engaged" (red), with no manual edit.
+ */
+export const HAS_CURRENT_ROLE = EXPERIENCE.some((entry) => entry.to === "Present");
 
 export const CONTACT_ROWS = [
   {

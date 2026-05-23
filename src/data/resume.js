@@ -26,8 +26,8 @@ export const HEADER = {
   title: 'Senior Software Engineer',
   location: 'Belo Horizonte, BR',
   focus: 'Node · TypeScript · NestJS · LLMs',
-  openTo: 'Full-time',
-  availability: 'Q3 2026',
+  openTo: 'Not currently looking',
+  availability: 'Not available',
   image: `${SITE_URL}/assets/profile.jpg`,
 };
 

@@ -33,7 +33,7 @@ export default function Hero() {
         <dt>Focus</dt>
         <dd>Node · TypeScript · NestJS · LLMs</dd>
         <dt>Open to</dt>
-        <dd>Full-time</dd>
+        <dd>Not currently looking</dd>
         <dt>GitHub</dt>
         <dd>
           <a href="https://github.com/iagocalazans" target="_blank" rel="noopener noreferrer">
