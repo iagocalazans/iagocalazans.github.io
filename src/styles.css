@@ -176,8 +176,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .hero-meta {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 24px;
+  grid-template-columns: auto 1fr;
+  gap: 0;
   font-family: var(--mono);
   font-size: 12px;
   padding-bottom: 8px;
