@@ -14,7 +14,9 @@ export const STACK = [
   ["MySQL", 2],
   ["Docker", 2],
   ["Angular", 1],
-  ["C++", 1],
+  ["Rust", 1],
+  ["Elixir", 0],
+  ["Go", 0],
 ];
 
 export const EXPERIENCE = [
@@ -24,6 +26,7 @@ export const EXPERIENCE = [
     current: true,
     role: "Software/Product Engineer",
     co: "HG Insights · remote from BR",
+    logo: "hg_insights.png",
     note: "AI-powered revenue growth intelligence platform unifying market, account, IT-spend, intent and competitor data into GTM strategy and activation workflows. Recently joined. More detail as the work takes shape.",
   },
   {
@@ -31,6 +34,7 @@ export const EXPERIENCE = [
     to: "Mar 2026",
     role: "Senior Software Engineer",
     co: "Edvisor.io · remote from BR",
+    logo: "edvisor-io.png",
     note: "Recruiting platform for international education - connecting agencies and partner schools. Owned the Wallet service that manages payments under the main platform via the Transfermate API, shipping a reusable integration library around it. Redesigned the notification system into an event-driven architecture (AWS SQS · Lambda · NestJS), and built LLM-powered internal tooling via MCP servers and the Claude API.",
   },
   {
@@ -38,6 +42,7 @@ export const EXPERIENCE = [
     to: "May 2024",
     role: "Senior Node.js Engineer",
     co: "Stone · remote",
+    logo: "stone.png",
     note: "Built and scaled the internal contact-center platform in TypeScript/NestJS on top of Twilio Voice and Twilio Flex, automating customer-support queue routing with RabbitMQ and Twilio Functions. Authored twilio-functions-utils, an open-source helper library that became the team’s default scaffold for Twilio Functions. Mentored 5+ engineers and lifted core test coverage from 40% to 85%+.",
   },
   {
@@ -45,6 +50,7 @@ export const EXPERIENCE = [
     to: "Feb 2022",
     role: "Tech Lead",
     co: "Kognita Lab · remote",
+    logo: "kognita_lab.png",
     note: "Designed and built shallot-framework, an in-house Node.js chatbot framework integrating Microsoft LUIS for NLU and a partner omnichannel communication platform, adopted across 10+ enterprise clients and cutting per-deployment setup time by 60%. Led a 6-engineer team shipping production services in NestJS, Node.js and PHP.",
   },
   {
@@ -68,7 +74,9 @@ export const EXPERIENCE = [
  * "Present". Drives the header status indicator: an ongoing role flips the
  * marker from "available" (green) to "engaged" (red), with no manual edit.
  */
-export const HAS_CURRENT_ROLE = EXPERIENCE.some((entry) => entry.to === "Present");
+export const HAS_CURRENT_ROLE = EXPERIENCE.some(
+  (entry) => entry.to === "Present",
+);
 
 export const CONTACT_ROWS = [
   {

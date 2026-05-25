@@ -25,6 +25,19 @@ export default function Experience() {
               <div className="tl-co">{entry.co}</div>
               <div className="tl-note">{entry.note}</div>
             </div>
+            {entry.logo && (
+              <div className="tl-logo">
+                <img
+                  src={`/assets/logos/${entry.logo}`}
+                  alt={`${entry.co.split('·')[0].trim()} logo`}
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+            )}
           </div>
         ))}
       </div>
