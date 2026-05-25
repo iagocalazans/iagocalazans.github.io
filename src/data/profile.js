@@ -9,14 +9,14 @@ export const STACK = [
   ["NestJS", 3],
   ["JavaScript", 3],
   ["Git", 3],
+  ["MySQL", 3],
   ["PostgreSQL", 3],
   ["React.js", 2],
-  ["MySQL", 2],
+  ["Elixir", 1],
+  ["Go", 1],
+  ["Rust", 1],
   ["Docker", 2],
   ["Angular", 1],
-  ["Rust", 1],
-  ["Elixir", 0],
-  ["Go", 0],
 ];
 
 export const EXPERIENCE = [
@@ -104,7 +104,7 @@ export const CONTACT_ROWS = [
   {
     lbl: "Stack Overflow",
     val: "stackoverflow.com/users/iago-calazans",
-    href: "https://stackoverflow.com/users/iago-calazans",
+    href: "https://stackoverflow.com/users/10481975/iago-calazans",
   },
   { lbl: "Overflow", val: "overflow.guru", href: "https://overflow.guru" },
 ];
