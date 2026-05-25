@@ -11,12 +11,12 @@ export default function Feature() {
           <div className="section-num">01 / featured release</div>
           <h2 className="section-title">A new tool, just shipped.</h2>
         </div>
-        <p className="section-desc">A guided budget app written in a weekend, polished over a month, now public.</p>
+        <p className="section-desc">A guided budget app written in a weekend, polished over a month, now in private beta.</p>
       </div>
 
       <div className="feature">
         <div className="feature-visual">
-          <div className="feature-brand">overflow.guru · v1.0</div>
+          <div className="feature-brand">overflow.guru · private beta</div>
 
           <div className="feature-screen" aria-hidden="true">
             <div className="feature-screen-bar">
@@ -189,7 +189,7 @@ export default function Feature() {
         <div className="feature-body">
           <div className="feature-kicker">
             <span className="pulse" />
-            New · public beta
+            Private beta · on request
           </div>
           <h3 className="feature-name">
             overflow<span className="tld">.guru</span>
@@ -198,7 +198,8 @@ export default function Feature() {
           <p className="feature-desc">
             Personal finance tools assume you already know how to budget. Overflow walks you through it: answer a
             handful of questions and it builds a category plan tuned to how you actually spend, then tracks the gap
-            between intent and reality.
+            between intent and reality. It’s currently in private beta, used personally and opened to a small group of
+            testers on request, with no public launch planned.
           </p>
           <ul className="feature-bullets">
             <li>Conversational onboarding</li>

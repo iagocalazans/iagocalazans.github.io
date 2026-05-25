@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import Icon from './Icon.jsx';
-import { HAS_CURRENT_ROLE } from '../data/profile.js';
+import { useEffect, useState } from "react";
+import Icon from "./Icon.jsx";
+import { HAS_CURRENT_ROLE } from "../data/profile.js";
 
 const NAV_ITEMS = [
-  { id: 'work', label: 'work' },
-  { id: 'about', label: 'about' },
-  { id: 'writing', label: 'writing' },
-  { id: 'contact', label: 'contact' },
+  { id: "work", label: "work" },
+  { id: "about", label: "about" },
+  { id: "writing", label: "writing" },
+  { id: "contact", label: "contact" },
 ];
 
 const SCROLL_THRESHOLD = 12;
@@ -31,30 +31,47 @@ export default function TopBar({ theme, setTheme, active }) {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD);
     handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className={scrolled ? 'topbar scrolled' : 'topbar'}>
+    <header className={scrolled ? "topbar scrolled" : "topbar"}>
       <div className="mark">
-        <span className={HAS_CURRENT_ROLE ? 'dot engaged' : 'dot'} />
+        <span className={HAS_CURRENT_ROLE ? "dot engaged" : "dot"} />
         <span>
-          <strong>iago calazans</strong> · @ HG Insights · not taking new work
+          <strong>iago calazans</strong> ·{" "}
+          <a
+            href="https://hginsights.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "var(--fg)",
+              fontWeight: 500,
+              borderBottom: "1px solid var(--accent)",
+            }}
+          >
+            @ HG Insights
+          </a>{" "}
+          · not taking new work
         </span>
       </div>
       <nav className="nav">
         {NAV_ITEMS.map((item) => (
-          <a key={item.id} href={`#${item.id}`} className={active === item.id ? 'active' : ''}>
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            className={active === item.id ? "active" : ""}
+          >
             {item.label}
           </a>
         ))}
         <button
           className="theme-toggle"
           aria-label="Toggle theme"
-          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
-          <Icon name={theme === 'light' ? 'moon' : 'sun'} size={14} />
+          <Icon name={theme === "light" ? "moon" : "sun"} size={14} />
         </button>
       </nav>
     </header>

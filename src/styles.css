@@ -177,7 +177,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .hero-meta {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4px 24px;
+  gap: 0 24px;
   font-family: var(--mono);
   font-size: 12px;
   padding-bottom: 8px;
@@ -468,18 +468,22 @@ section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top:
 }
 
 /* ---------- About / Stack / Experience ---------- */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 64px;
+.about-layout {
+  display: flow-root;
+}
+
+.about-figure {
+  float: right;
+  width: clamp(300px, 42%, 460px);
+  margin: 4px 0 28px 60px;
 }
 
 .about-copy {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--ink-2);
-  max-width: 56ch;
   text-wrap: pretty;
+  text-align: justify;
 }
 .about-copy p + p { margin-top: 14px; }
 .about-copy strong { color: var(--fg); font-weight: 500; }
@@ -1319,7 +1323,7 @@ section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top:
   .feature-screen { padding: 14px 14px 12px; }
   .og-mock { display: none; }
   .og-mock-mobile { display: flex; }
-  .grid-2 { grid-template-columns: 1fr; gap: 36px; }
+  .about-figure { float: none; width: 100%; margin: 0 0 28px; }
   .archive-row { grid-template-columns: 40px 1fr 60px; }
   .archive-desc, .archive-stats { display: none; }
   .posts { grid-template-columns: 1fr; }

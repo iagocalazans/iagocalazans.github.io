@@ -35,11 +35,17 @@ export const HEADER = {
  * One-paragraph professional summary, in plain prose for both humans and machines.
  */
 export const SUMMARY = [
-  'Backend engineer with a decade of production experience building B2B SaaS, telephony and conversational platforms.',
-  'Day-to-day: Node, TypeScript, NestJS, with strong opinions about hexagonal architecture, event-driven',
+  'Backend engineer with more than a decade of production experience building B2B SaaS, telephony and conversational platforms.',
+  'Day-to-day: Node, TypeScript and NestJS, with strong opinions about hexagonal architecture, event-driven',
   'systems and DDD.',
   '',
-  'Recently focused on LLM tooling: MCP servers, Claude API integrations and developer-facing internal apps.',
+  'The path runs through a range of domains and real-sized codebases: e-commerce and BI early on (Magento, PHP and',
+  'full-stack JavaScript), product leadership at Grupo Artha, tech lead at Kognita Lab building the shallot-framework',
+  'chatbot platform, scaling Stone’s Twilio-based contact-center platform, and owning the Wallet payments service at',
+  'Edvisor.io.',
+  '',
+  'Recently focused on LLM tooling: MCP servers, integrations with Anthropic’s Claude API and developer-facing internal',
+  'apps. As of May 2026, building an AI-driven revenue-growth-intelligence platform at HG Insights.',
 ];
 
 /**
@@ -52,7 +58,8 @@ export const SIDE_PROJECTS = [
     note: [
       'A guided personal-finance app for people who never managed to use a budget app.',
       'Conversational onboarding, Brazilian-real first (multi-currency next), local-first, no bank scraping.',
-      'PWA, mobile-shaped. Public beta.',
+      'PWA, mobile-shaped.',
+      'Currently in private beta, used personally and opened to a small group of testers on request. No public launch planned.',
     ],
   },
 ];

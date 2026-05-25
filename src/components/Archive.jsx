@@ -4,6 +4,7 @@ import { useGithubRepos } from '../hooks/useGithubRepos.js';
 import { LANG_COLORS } from '../data/profile.js';
 
 const SKELETON_COUNT = 3;
+const FETCH_LIMIT = 3
 
 /**
  * Open-source archive section: pulls the user's most-starred GitHub repos at runtime
@@ -14,7 +15,7 @@ const SKELETON_COUNT = 3;
  * @param props.token - Optional GitHub PAT (raises rate limit).
  */
 export default function Archive({ username, token }) {
-  const { repos, loading, error } = useGithubRepos({ username, token, limit: 5 });
+  const { repos, loading, error } = useGithubRepos({ username, token, limit: FETCH_LIMIT });
   const [filter, setFilter] = useState('All');
 
   const langs = useMemo(() => {

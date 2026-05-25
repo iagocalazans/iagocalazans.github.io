@@ -5,24 +5,15 @@ export default function Hero() {
   return (
     <section className="hero" style={{ paddingTop: 0, borderTop: 0 }}>
       <div>
-        <div className="hero-eyebrow">Portfolio / 2026 · vol. 04</div>
+        <div className="hero-eyebrow">Portfolio</div>
         <h1 className="display">
           Software engineer<br />
           shipping <span className="italic">calm,</span><br />
           opinionated tools.
         </h1>
         <p className="hero-tag">
-          Senior engineer based in Belo Horizonte. I write Node, TypeScript and NestJS for a living, and design my own
-          little tools on the side. The latest is{' '}
-          <a
-            href="https://overflow.guru"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'var(--fg)', fontWeight: 500, borderBottom: '1px solid var(--accent)' }}
-          >
-            Overflow.Guru
-          </a>
-          , a guided budget app.
+          Senior engineer based in Belo Horizonte, MG, BR. I write Node.js, TypeScript and NestJS for a living, and design my own
+          little tools on the side.
         </p>
       </div>
       <dl className="hero-meta">
