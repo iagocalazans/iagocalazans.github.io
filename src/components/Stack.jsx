@@ -1,8 +1,10 @@
 import { STACK, STACK_COLORS } from '../data/profile.js';
 
 /**
- * Skills/stack section. Each pill's dot is tinted with the item's brand color;
- * the dot fill style encodes self-rated proficiency (solid = lead-ready, ring otherwise).
+ * Skills/stack section. Each pill encodes self-rated proficiency through its dot
+ * and border, both tinted with the item's brand color:
+ * lvl-3 = filled dot + colored border, lvl-2 = ring dot + colored border,
+ * lvl-1 = ring dot + neutral border.
  */
 export default function Stack() {
   return (
@@ -26,6 +28,11 @@ export default function Stack() {
           </span>
         ))}
       </div>
+      <ul className="stack-legend">
+        <li className="lvl-3"><span className="level" />Expert</li>
+        <li className="lvl-2"><span className="level" />Advanced</li>
+        <li className="lvl-1"><span className="level" />Learning</li>
+      </ul>
     </section>
   );
 }

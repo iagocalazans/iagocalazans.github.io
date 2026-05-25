@@ -12,11 +12,12 @@ export const STACK = [
   ["MySQL", 3],
   ["PostgreSQL", 3],
   ["React.js", 2],
+  ["Angular", 2],
+  ["C/C++", 2],
+  ["Docker", 2],
   ["Elixir", 1],
   ["Go", 1],
   ["Rust", 1],
-  ["Docker", 2],
-  ["Angular", 1],
 ];
 
 export const EXPERIENCE = [
